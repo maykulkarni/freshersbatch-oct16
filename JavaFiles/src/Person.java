@@ -1,4 +1,4 @@
-public class Person {
+public class Person im{
 	public int id;
 	public String name;
 	Person(int id, String name) {
