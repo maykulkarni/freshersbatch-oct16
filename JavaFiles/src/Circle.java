@@ -1,6 +1,16 @@
-public class Circle extends Point {
+public class Circle implements Sortable {
+	int radius;
+	Circle(int radius) {
+		this.radius = radius;
+	}
+
 	@Override
-	public void draw() {
-		System.out.println("Drawing a Circle");
+	public int compareTo(Sortable other) {
+		return this.radius - ((Circle) other).radius;
+	}
+
+	@Override
+	public String toString() {
+		return " Circle with radius " + radius;
 	}
 }

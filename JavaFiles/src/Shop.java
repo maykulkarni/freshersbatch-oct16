@@ -25,6 +25,7 @@ public class Shop {
 
 	public static void placeOrder(DesertItem item, int quantity) {
 		System.out.println("Your order costs : " + item.price() * quantity);
+		
 	}
 
 	public static void main(String[] args) {

@@ -31,8 +31,9 @@ public class Date implements Cloneable {
 
     }
 
-    public Object clone() throws CloneNotSupportedException {
-        return super.clone();
+    public Date clone() throws CloneNotSupportedException {
+        Date d2 = new Date(this.getDate(), this.getMonth(), this.getYear());
+        return d2;
     }
 
     public Date(int date, int month, int year) {
