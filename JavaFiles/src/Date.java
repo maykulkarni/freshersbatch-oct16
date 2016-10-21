@@ -1,49 +1,18 @@
-public class Date implements Cloneable {
+import java.io.Serializable;
+
+public class Date implements Cloneable, Serializable {
     private int date;
     private int month;
     private int year;
 
-    public void setDate(int date) {
-        this.date = date;
-    }
-
-    public int getDate() {
-        return this.date;
-    }
-
-    public void setMonth(int month) {
-        this.month = month;
-    }
-
-    public int getMonth() {
-        return this.month;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
-
-    public int getYear() {
-        return this.year;
-    }
-
     public Date() {
 
-    }
-
-    public Date clone() throws CloneNotSupportedException {
-        Date d2 = new Date(this.getDate(), this.getMonth(), this.getYear());
-        return d2;
     }
 
     public Date(int date, int month, int year) {
         setDate(date);
         setMonth(month);
         setYear(year);
-    }
-
-    public void printDate() {
-        System.out.println(getDate() + "-" + getMonth() + "-" + getYear());
     }
 
     public static void swapDates(Date[] dateArr) {
@@ -65,5 +34,47 @@ public class Date implements Cloneable {
         p = dates[1];
         d.printDate();
         p.printDate();
+    }
+
+    public int getDate() {
+        return this.date;
+    }
+
+    public void setDate(int date) {
+        this.date = date;
+    }
+
+    public int getMonth() {
+        return this.month;
+    }
+
+    public void setMonth(int month) {
+        this.month = month;
+    }
+
+    public int getYear() {
+        return this.year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public Date clone() throws CloneNotSupportedException {
+        Date d2 = new Date(this.getDate(), this.getMonth(), this.getYear());
+        return d2;
+    }
+
+    @Override
+    public String toString() {
+        return "Date{" +
+                "date=" + date +
+                ", month=" + month +
+                ", year=" + year +
+                '}';
+    }
+
+    public void printDate() {
+        System.out.println(getDate() + "-" + getMonth() + "-" + getYear());
     }
 }

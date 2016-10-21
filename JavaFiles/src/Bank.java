@@ -1,7 +1,8 @@
-class Account {
-	int balance;
-	Account(int balance) {
-		this.balance = balance;
+class Account_ {
+    int balance;
+
+    Account_(int balance) {
+        this.balance = balance;
 	}
 
 	public int getBalance() {
@@ -9,8 +10,8 @@ class Account {
 	}
 }
 
-class SavingsAccount extends Account {
-	int fixedDeposit;
+class SavingsAccount extends Account_ {
+    int fixedDeposit;
 
 	SavingsAccount(int balance, int fixedDeposit) {
 		super(balance);
@@ -22,8 +23,8 @@ class SavingsAccount extends Account {
 	}
 }
 
-class CurrentAccount extends Account {
-	int cashCredit;
+class CurrentAccount extends Account_ {
+    int cashCredit;
 	CurrentAccount(int balance, int cashCredit) {
 		super(balance);
 		this.cashCredit = cashCredit;

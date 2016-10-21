@@ -1,24 +1,53 @@
-package src;
-public class Account {
-    static int balance;
+import java.io.Serializable;
 
-    static {
-        balance = 0;
+public class Account implements Serializable {
+    private String accountName;
+    private int accountID;
+    private double balance;
+    private Date date;
+    //public final long serailVersionUid = 4L;
+
+    public Account(String accountName, int accountID, double balance, Date d) {
+        this.accountName = accountName;
+        this.accountID = accountID;
+        this.balance = balance;
+        this.date = d;
     }
 
-    public void deposit(int amount) {
-        balance += amount;
+    public Date getDate() {
+        return date;
     }
 
-    public void withdraw(int amount) {
-        balance -= amount;
+    public void setDate(Date date) {
+        this.date = date;
     }
 
-    public void print() {
-        System.out.println("balance is : " + balance);
+    public String getAccountName() {
+        return accountName;
     }
 
-    public static void main(String[] args) {
+    public void setAccountName(String accountName) {
+        this.accountName = accountName;
+    }
 
+    public int getAccountID() {
+        return accountID;
+    }
+
+    public void setAccountID(int accountID) {
+        this.accountID = accountID;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public void setBalance(double balance) {
+        this.balance = balance;
+    }
+
+    @Override
+    public String toString() {
+        return this.getAccountName() + " " + this.getAccountID() + " " + this.getBalance() + " " + this.getDate();
     }
 }
