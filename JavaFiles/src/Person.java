@@ -1,13 +1,23 @@
-public class Person im{
-	public int id;
-	public String name;
-	Person(int id, String name) {
-		this.id = id;
-		this.name = name;
-	}
+/**
+ * Created by kulkarni_my on 10/26/2016.
+ */
+public class Person {
+    String name;
+    int weight;
+    int height;
 
-	@Override
-	public String toString() {
-		return this.id + " " + this.name;
-	}
+    public Person(String name, int weight, int height) {
+        this.name = name;
+        this.weight = weight;
+        this.height = height;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", weight=" + weight +
+                ", height=" + height +
+                '}';
+    }
 }

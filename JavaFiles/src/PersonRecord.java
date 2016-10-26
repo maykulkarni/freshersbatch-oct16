@@ -1,7 +1,7 @@
 import java.io.IOException;
 import java.io.RandomAccessFile;
 
-public class PersonRecord extends Person {
+public class PersonRecord extends PersonOld {
 
     public static final int SIZE =
             Integer.BYTES + (3 * (Character.BYTES * 15));

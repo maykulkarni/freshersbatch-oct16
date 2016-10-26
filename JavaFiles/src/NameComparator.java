@@ -1,8 +1,9 @@
 import java.util.Comparator;
-public class NameComparator implements Comparator<Person> {
-	@Override
-	public int compare(Person one, Person two) {
-		String nameOne = one.getName();
+
+public class NameComparator implements Comparator<PersonOld> {
+    @Override
+    public int compare(PersonOld one, PersonOld two) {
+        String nameOne = one.getName();
 		String nameTwo = two.getName();
 		int ctr = 0;
 		while (ctr < nameOne.length() && ctr < nameTwo.length()) {
