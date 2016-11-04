@@ -2,12 +2,11 @@
  * Created by kulkarni_my on 10/24/2016.
  */
 public class PingPongTestThread extends Thread {
-    Thread ping, pong, tong;
 
     PingPongTestThread() {
-        ping = new Thread(this, "Ping");
-        pong = new Thread(this, "Pong");
-        tong = new Thread(this, "Tong");
+        Thread ping = new Thread(this, "Ping");
+        Thread pong = new Thread(this, "Pong");
+        Thread tong = new Thread(this, "Tong");
         tong.setDaemon(true);
         ping.start();
         pong.start();
