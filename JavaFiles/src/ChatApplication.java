@@ -4,6 +4,7 @@ import java.util.*;
 /**
  * Created by kulkarni_my on 10/26/2016.
  */
+
 public class ChatApplication {
     static Map<Integer, Set> chatRoomUserMap = new HashMap<>();
 

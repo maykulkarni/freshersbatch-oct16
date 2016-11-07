@@ -5,6 +5,7 @@ import java.util.Random;
 /**
  * Created by kulkarni_my on 10/26/2016.
  */
+
 public class ChatRoom implements Cloneable {
     private int chatRoomId = 0;
     private List<String> messages;
